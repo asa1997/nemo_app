@@ -29,7 +29,15 @@ sample_conversation: |
 rails:
   input:
     flows:
-      self check input
+      self check input:
+        type: template
+        template: |
+          {
+            input: {
+              text: "{{ user_input }}"
+            }
+          }
+
   
   # output:
   #   flows:
