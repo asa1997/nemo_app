@@ -12,7 +12,6 @@ bedrock_model_args = {
         "max_tokens_to_sample": 1024,
         "top_p": 0.9,
         "stop_sequences": ["Human:"],
-        "region_name": "ap-south-1"
 }
 llm = Bedrock(
     model_id=bedrock_text_generation_model,
