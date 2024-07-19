@@ -29,15 +29,7 @@ sample_conversation: |
 rails:
   input:
     flows:
-      self check input:
-        type: template
-        template: |
-          {
-            input: {
-              text: "{{ user_input }}"
-            }
-          }
-
+      check sensitive data
   
   # output:
   #   flows:
