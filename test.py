@@ -24,7 +24,7 @@ chain = LLMChain(llm=llm, prompt=prompt, verbose=True)
 
 nest_asyncio.apply()
 
-config = RailsConfig.from_path("./config.yml")
+config = RailsConfig.from_path("./config/config.yml")
 guardrails = RunnableRails(config, input_key="query", output_key='text')
 chain_with_guardrails = guardrails | chain
 
