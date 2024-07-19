@@ -30,5 +30,5 @@ chain_with_guardrails = guardrails | chain
 
 chain_with_guardrails.invoke({"query": "Hello! What can you do for me?"}, verbose=True)
 
-# {'query': 'Hello! What can you do for me?',
-#  'text': " Hello! I'm Claude, an AI assistant created by Anthropic. I can answer questions, have conversations, and provide helpful information to you."}
+{'query': 'Hello! What can you do for me?',
+ 'text': " Hello! I'm Claude, an AI assistant created by Anthropic. I can answer questions, have conversations, and provide helpful information to you."}
