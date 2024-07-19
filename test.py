@@ -8,14 +8,15 @@ import nest_asyncio
 
 bedrock_text_generation_model = 'mistral.mistral-7b-instruct-v0:2'
 
-anthropic_model_kwargs = { 
+bedrock_model_args = { 
         "max_tokens_to_sample": 1024,
         "top_p": 0.9,
-        "stop_sequences": ["Human:"]
+        "stop_sequences": ["Human:"],
+        "region_name": "ap-south-1"
 }
 llm = Bedrock(
     model_id=bedrock_text_generation_model,
-    model_kwargs=anthropic_model_kwargs,
+    model_kwargs=bedrock_model_args,
     streaming=True)
 
 prompt = PromptTemplate(input_variables=["query"], template=("Respond concisely: {query}"))
