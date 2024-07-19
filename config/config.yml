@@ -30,11 +30,10 @@ sample_conversation: |
 rails:
   input:
     flows:
-      check sensitive data
-      reject harmful queries
+      self check input
   
-  output:
-    flows:
-      validate facts
-      filter inappropriate content
+  # output:
+  #   flows:
+  #     validate facts
+  #     filter inappropriate content
 
