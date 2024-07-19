@@ -5,7 +5,6 @@ models:
     parameters: 
       model_id: mistral.mistral-7b-instruct-v0:2
       streaming: True
-      region: ap-south-1
 
 instructions:
   - type: general
