@@ -1,38 +1,58 @@
 models:
   - type: main
     engine: amazon_bedrock
-    model_id: mistral.mistral-7b-instruct-v0:2
     parameters: 
       model_id: mistral.mistral-7b-instruct-v0:2
-      streaming: True
 
-instructions:
-  - type: general
-    content: |
-      Below is a conversation between a user and a bot called the ABC Bot.
-      The bot is designed to answer employee questions about the ABC Company.
-      The bot is knowledgeable about the employee handbook and company policies.
-      If the bot does not know the answer to a question, it truthfully says it does not know.
+# instructions:
+#   - type: general
+#     content: |
+#       Below is a conversation between a user and a bot called the ABC Bot.
+#       The bot is designed to answer employee questions about the ABC Company.
+#       The bot is knowledgeable about the employee handbook and company policies.
+#       If the bot does not know the answer to a question, it truthfully says it does not know.
       
 
-sample_conversation: |
-  user "Hi there. Can you help me with some questions I have about the company?"
-    express greeting and ask for assistance
-  bot express greeting and confirm and offer assistance
-    "Hi there! I'm here to help answer any questions you may have about the ABC Company. What would you like to know?"
-  user "What's the company policy on paid time off?"
-    ask question about benefits
-  bot respond to question about benefits
-    "The ABC Company provides eligible employees with up to two weeks of paid vacation time per year, as well as five paid sick days per year. Please refer to     the employee handbook for more information." 25 
+# sample_conversation: |
+#   user "Hi there. Can you help me with some questions I have about the company?"
+#     express greeting and ask for assistance
+#   bot express greeting and confirm and offer assistance
+#     "Hi there! I'm here to help answer any questions you may have about the ABC Company. What would you like to know?"
+#   user "What's the company policy on paid time off?"
+#     ask question about benefits
+#   bot respond to question about benefits
+#     "The ABC Company provides eligible employees with up to two weeks of paid vacation time per year, as well as five paid sick days per year. Please refer to     the employee handbook for more information." 25 
 
 
-# rails:
-#   input:
-#     flows:
-#       check sensitive data
-  
-  # output:
-  #   flows:
-  #     validate facts
-  #     filter inappropriate content
+rails:
+  # Input rails are invoked when a new message from the user is received.
+  input:
+    flows:
+      - self check input
+
+
+#   # output:
+#   #   flows:
+#   #     validate facts
+#   #     filter inappropriate content
+
+# models:
+#   mistral:
+#     type: bedrock
+#     params:
+#       api_key: NwlN1rWLUK7N22inPzH5ARZYKxSRxDeX9NJxZSOy
+#       region: ap-south-1  # e.g., us-east-1
+#       streaming: true
+
+# guardrails:
+#   self_check_input:
+#     type: template
+#     template: |
+#       {
+#         "input": {
+#           "text": "{{ query }}"
+#         }
+#       }
+
+
 
