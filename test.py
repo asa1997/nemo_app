@@ -11,14 +11,14 @@ import logging
 
 # Define the Bedrock model and arguments
 bedrock_text_generation_model = 'mistral.mistral-7b-instruct-v0:2'
-# bedrock_model_args = {
-#     "max_tokens_to_sample": 1024
-# }
+bedrock_model_args = {
+    "max_tokens_to_sample": 1024
+}
 
 # Initialize the Bedrock model
 llm = Bedrock(
     model_id=bedrock_text_generation_model,
-    # model_kwargs=bedrock_model_args,
+    model_kwargs=bedrock_model_args,
     streaming=True
 )
 
