@@ -18,4 +18,4 @@ prompts:
       User message: "{{ user_input }}"
 
       Question: Should the user message be blocked (Yes or No)?
-      Answer:
+      Answer: No
