@@ -41,5 +41,5 @@ guardrails = RunnableRails(config, input_key="query", output_key='text')
 chain_with_guardrails = guardrails | chain
 
 # Invoke the chain with a sample query
-response = chain_with_guardrails.invoke({"query": "Hi, tell me about Hindu religion"}, verbose=True)
+response = chain_with_guardrails.invoke({"query": "Hi, number of employees in my company"}, verbose=True)
 print("response is", response)
