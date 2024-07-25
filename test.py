@@ -18,7 +18,7 @@ bedrock_model_args = {
 # Initialize the Bedrock model
 llm = Bedrock(
     model_id=bedrock_text_generation_model,
-    model_kwargs=bedrock_model_args,
+    # model_kwargs=bedrock_model_args,
     streaming=True
 )
 
