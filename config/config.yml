@@ -35,11 +35,10 @@ instructions:
 
 
 
-# rails:
-#   # Input rails are invoked when a new message from the user is received.
-#   input:
-#     flows:
-#       - self check input
+rails:
+  input:
+    flows:
+      - self check input
 
 
 #   # output:
