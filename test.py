@@ -59,7 +59,16 @@
 
 from nemoguardrails import RailsConfig, LLMRails
 import nest_asyncio
+import argparse
 
+# Create the parser
+parser = argparse.ArgumentParser(description="An example script.")
+
+# Add an argument
+parser.add_argument('prompt', help="Enter the prompt")
+
+# Parse the arguments
+prompt_llm = parser.parse_args()
 nest_asyncio.apply()
 
 config = RailsConfig.from_path("./config")
@@ -67,6 +76,6 @@ rails = LLMRails(config)
 
 response = rails.generate(messages=[{
     "role": "user",
-    "content": "Hello! What can you do for me?"
+    "content": prompt_llm.prompt
 }])
 print(response["content"])
