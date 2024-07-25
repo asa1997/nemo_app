@@ -13,14 +13,6 @@ models:
 #       The LLM is not aware about general knowledge.
 #       If the LLM  does not know the answer to a question, it truthfully says it does not know.
 
-instructions:
-  - type: general
-    content: |
-      Below is a conversation between a user and a bot called the ABC Bot.
-      The bot is designed to answer employee questions about the ABC Company.
-      The bot is knowledgeable about the employee handbook and company policies.
-      If the bot does not know the answer to a question, it truthfully says it does not know.
-
 sample_conversation: |
   user "Hi there. Can you help me with some questions I have about the company?"
     express greeting and ask for assistance
@@ -30,6 +22,16 @@ sample_conversation: |
     ask question about benefits
   bot respond to question about benefits
     "The ABC Company provides eligible employees with up to two weeks of paid vacation time per year, as well as five paid sick days per year. Please refer to     the employee handbook for more information." 25 
+
+
+instructions:
+  - type: general
+    content: |
+      Below is a conversation between a user and a bot called the ABC Bot.
+      The bot is designed to answer employee questions about the ABC Company.
+      The bot is knowledgeable about the employee handbook and company policies.
+      If the bot does not know the answer to a question, it truthfully says it does not know.
+
 
 
 # rails:
