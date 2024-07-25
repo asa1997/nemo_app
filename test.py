@@ -79,3 +79,10 @@ response = rails.generate(messages=[{
     "content": prompt_llm.prompt
 }])
 print(response["content"])
+
+info = rails.explain()
+info.print_llm_calls_summary()
+
+print(info.llm_calls[0].prompt)
+
+print(info.llm_calls[0].completion)
