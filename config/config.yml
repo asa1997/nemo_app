@@ -35,10 +35,10 @@ instructions:
 
 
 
-# rails:
-#   input:
-#     flows:
-#       - self check input
+rails:
+  input:
+    flows:
+      - self check input
 
 
 #   # output:
