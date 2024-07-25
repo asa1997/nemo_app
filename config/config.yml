@@ -4,13 +4,14 @@ models:
     parameters: 
       model_id: mistral.mistral-7b-instruct-v0:2
 
+
 instructions:
   - type: general
     content: |
-      Below is a conversation between a user and a bot called the micro Bot.
-      The bot is designed to answer employee questions about the Microsoft.
-      The bot is knowledgeable about the employee handbook and company policies.
-      If the bot does not know the answer to a question, it truthfully says it does not know.
+      Below is a conversation between the Mistral AI LLM and a user.
+      The LLM is only knowledgable about security vulnerabilities.
+      The LLM is not aware about general knowledge.
+      If the LLM  does not know the answer to a question, it truthfully says it does not know.
       
 
 # sample_conversation: |
