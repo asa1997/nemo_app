@@ -6,6 +6,19 @@ from langchain.chains import LLMChain
 import nest_asyncio
 import logging
 
+import argparse
+
+# Create the parser
+parser = argparse.ArgumentParser(description="An example script.")
+
+# Add an argument
+parser.add_argument('prompt', help="Enter the prompt")
+
+# Parse the arguments
+prompt_llm = parser.parse_args()
+
+# Print the "echo" argument
+
 # Set up logging
 # logging.basicConfig(level=logging.DEBUG)
 
@@ -41,5 +54,5 @@ guardrails = RunnableRails(config, input_key="query", output_key='text')
 chain_with_guardrails = guardrails | chain
 
 # Invoke the chain with a sample query
-response = chain_with_guardrails.invoke({"query": "Tell me about ABC Company"}, verbose=True)
+response = chain_with_guardrails.invoke({"query": prompt_llm.prompt}, verbose=True)
 print(f"response is ==> {response}")
