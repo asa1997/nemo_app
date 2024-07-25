@@ -23,6 +23,16 @@ models:
 #   bot respond to question about benefits
 #     "The ABC Company provides eligible employees with up to two weeks of paid vacation time per year, as well as five paid sick days per year. Please refer to     the employee handbook for more information." 25 
 
+define user express greeting
+  "Hello"
+  "Hi"
+  "Wassup?"
+
+define bot express greeting
+  "Hey there!"
+
+define bot ask how are you
+  "How are you doing?"
 
 # rails:
 #   # Input rails are invoked when a new message from the user is received.
