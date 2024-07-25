@@ -41,5 +41,7 @@ guardrails = RunnableRails(config, input_key="query", output_key='text')
 chain_with_guardrails = guardrails | chain
 
 # Invoke the chain with a sample query
-response = chain_with_guardrails.invoke({"query": "Hi, can you provide info on vulnerabilities in spring-boot"}, verbose=True)
-print("response is", response)
+# response = chain_with_guardrails.invoke({"query": "Hi, can you provide info on vulnerabilities in spring-boot"}, verbose=True)
+# print("response is", response)
+info = guardrails.explain()
+info.print_llm_calls_summary()
