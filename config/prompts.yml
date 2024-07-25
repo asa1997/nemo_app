@@ -19,7 +19,7 @@ prompts:
 
       Question: Should the user message be blocked (Yes or No)?
       Answer:
-- task: self_check_output
+  - task: self_check_output
     content: |
       Your task is to check if the bot message below complies with the below policy
 
