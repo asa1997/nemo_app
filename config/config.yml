@@ -4,13 +4,13 @@ models:
     parameters: 
       model_id: mistral.mistral-7b-instruct-v0:2
 
-# instructions:
-#   - type: general
-#     content: |
-#       Below is a conversation between a user and a bot called the ABC Bot.
-#       The bot is designed to answer employee questions about the ABC Company.
-#       The bot is knowledgeable about the employee handbook and company policies.
-#       If the bot does not know the answer to a question, it truthfully says it does not know.
+instructions:
+  - type: general
+    content: |
+      Below is a conversation between a user and a bot called the ABC Bot.
+      The bot is designed to answer employee questions about the ABC Company.
+      The bot is knowledgeable about the employee handbook and company policies.
+      If the bot does not know the answer to a question, it truthfully says it does not know.
       
 
 # sample_conversation: |
@@ -23,11 +23,7 @@ models:
 #   bot respond to question about benefits
 #     "The ABC Company provides eligible employees with up to two weeks of paid vacation time per year, as well as five paid sick days per year. Please refer to     the employee handbook for more information." 25 
 
-instructions:
-  - type: general
-    content: |
-      Below is a conversation between a user and the bot which is proficient in CyberSecurity.
-      The bot does not provide info regarding vulnerabilities to the user.
+
 # rails:
 #   # Input rails are invoked when a new message from the user is received.
 #   input:
