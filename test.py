@@ -58,6 +58,9 @@
 # print(f"response is ==> {response}")
 
 from nemoguardrails import RailsConfig, LLMRails
+import nest_asyncio
+
+nest_asyncio.apply()
 
 config = RailsConfig.from_path("./config")
 rails = LLMRails(config)
