@@ -86,3 +86,5 @@ info.print_llm_calls_summary()
 print(info.llm_calls[0].prompt)
 
 print(info.llm_calls[0].completion)
+
+print(info.colang_history)
